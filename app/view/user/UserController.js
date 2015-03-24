@@ -1,0 +1,23 @@
+/**
+ * Created by mbrocato on 3/11/15.
+ */
+Ext.define('Demo.view.user.UserController', {
+    extend: 'Ext.app.ViewController',
+    alias: 'controller.user',
+
+    /**
+     * Called when the view is created
+     */
+    init: function() {
+        var user = this.getView().record
+        this.getViewModel().set('user', user)
+    },
+
+    /**
+     * @param {Ext.button.Button} component
+     * @param {Event} e
+     */
+    closeDialog: function (component, e) {
+        this.getView().close()
+    }
+});
