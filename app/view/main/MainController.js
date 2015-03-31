@@ -6,18 +6,11 @@
  * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('Demo.view.main.MainController', {
-    uses: [
-        'Ext.container.Container'
-    ],
     requires: [
         'Demo.view.user.User',
     ],
     extend: 'Ext.app.ViewController',
     alias: 'controller.main',
-
-    onTestClick: function() {
-        Ext.container.Container.create()
-    },
 
     /**
      * @param {Ext.view.View} component
@@ -27,6 +20,17 @@ Ext.define('Demo.view.main.MainController', {
      * @param {Ext.event.Event} e
      */
     onItemClick: function (component, record, item, index, e) {
-        Ext.create('Demo.view.user.User', {record: record}).show()
+        var dialog = Ext.create('Demo.view.user.User');
+        dialog.getViewModel().set('user', record);
+        dialog.show();
+    },
+
+    /**
+     * @param {Ext.button.Button} component
+     * @param {Event} e
+     */
+    onNewUserClick: function (component, e) {
+        var dialog = Ext.create('Demo.view.user.User');
+        dialog.show();
     }
 });

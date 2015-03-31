@@ -27,11 +27,10 @@ Ext.define('Demo.view.main.Main', {
         xtype: 'toolbar',
         items: [{
             xtype: 'button',
-            text: 'New User'
-        }, {
-            xtype: 'button',
-            text: 'Test',
-            handler: 'onTestClick'
+            text: 'New User',
+            listeners: {
+                click: 'onNewUserClick'
+            }
         }]
     }],
 

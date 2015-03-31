@@ -1,4 +1,8 @@
 Ext.define('Demo.view.user.User', {
+    requires: [
+        'Ext.button.Button',
+        'Ext.form.field.Text'
+    ],
     extend: 'Ext.window.Window',
 
     config: {
