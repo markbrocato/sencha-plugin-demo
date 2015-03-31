@@ -4,7 +4,12 @@
 Ext.define('Demo.view.main.MainModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.main',
-    requires: ['Demo.model.User'],
+
+    requires: [
+        'Ext.data.proxy.Ajax',
+        'Ext.data.reader.Json',
+        'Demo.model.User'
+    ],
 
     stores: {
         users: {
