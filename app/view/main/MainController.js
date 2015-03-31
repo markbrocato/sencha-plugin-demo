@@ -20,9 +20,14 @@ Ext.define('Demo.view.main.MainController', {
      * @param {Ext.event.Event} e
      */
     onItemClick: function (component, record, item, index, e) {
-        var dialog = Ext.create('Demo.view.user.User');
-        dialog.getViewModel().set('user', record);
-        dialog.show();
+        Ext.create('Demo.view.user.User', {
+            autoShow: true,
+            viewModel: {
+                data: {
+                    user: record
+                }
+            }
+        });
     },
 
     /**

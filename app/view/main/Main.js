@@ -21,7 +21,10 @@ Ext.define('Demo.view.main.Main', {
     },
     
     controller: 'main',
-    viewModel: 'main',
+
+    viewModel: {
+        type: 'main'
+    },
 
     dockedItems: [{
         xtype: 'toolbar',

@@ -6,14 +6,6 @@ Ext.define('Demo.view.user.UserController', {
     alias: 'controller.user',
 
     /**
-     * Called when the view is created
-     */
-    init: function() {
-        var user = this.getView().record
-        this.getViewModel().set('user', user)
-    },
-
-    /**
      * @param {Ext.button.Button} component
      * @param {Event} e
      */
